@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="认识 MarkdownMarkdown是一种轻量级的「标记语言」，通过简单的语法就能实现「易读易写」的文章，使我们能专注于文章本身的内容，而不是排版样式。">
+<meta name="description" content="Markdown是一种轻量级的「标记语言」，通过简单的语法就能实现「易读易写」的文章，使我们能专注于文章本身的内容，而不是排版样式。">
 <meta name="keywords" content="Markdown">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门Markdown">
+<meta property="og:title" content="初识 Markdown">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;03&#x2F;markdownIntroduce&#x2F;index.html">
 <meta property="og:site_name" content="GQMaker实验室">
-<meta property="og:description" content="认识 MarkdownMarkdown是一种轻量级的「标记语言」，通过简单的语法就能实现「易读易写」的文章，使我们能专注于文章本身的内容，而不是排版样式。">
+<meta property="og:description" content="Markdown是一种轻量级的「标记语言」，通过简单的语法就能实现「易读易写」的文章，使我们能专注于文章本身的内容，而不是排版样式。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-03T09:11:53.975Z">
+<meta property="og:updated_time" content="2019-12-04T02:18:30.254Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>入门Markdown | GQMaker实验室</title>
+  <title>初识 Markdown | GQMaker实验室</title>
   
 
 
@@ -278,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">入门Markdown</h1>
+          <h1 class="post-title" itemprop="name headline">初识 Markdown</h1>
         
 
         <div class="post-meta">
@@ -350,7 +350,7 @@
       
 
       
-        <h1 id="认识-Markdown"><a href="#认识-Markdown" class="headerlink" title="认识 Markdown"></a>认识 Markdown</h1><p>Markdown是一种轻量级的「标记语言」，通过简单的语法就能实现「易读易写」的文章，使我们能专注于文章本身的内容，而不是排版样式。</p>
+        <p>Markdown是一种轻量级的「标记语言」，通过简单的语法就能实现「易读易写」的文章，使我们能专注于文章本身的内容，而不是排版样式。</p>
 <a id="more"></a>
 
 <h1 id="使用-Markdown-的优点"><a href="#使用-Markdown-的优点" class="headerlink" title="使用 Markdown 的优点"></a>使用 Markdown 的优点</h1><ul>
@@ -376,10 +376,14 @@
 <p>区别仅在于有无<code>!</code>。</p>
 <h2 id="5-粗体和斜体"><a href="#5-粗体和斜体" class="headerlink" title="5.    粗体和斜体"></a>5.    粗体和斜体</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*我是斜体*</span></span><br><span class="line">我是正常体</span><br><span class="line"><span class="strong">**我是粗体**</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="6-代码框"><a href="#6-代码框" class="headerlink" title="6.    代码框"></a>6.    代码框</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">行级代码引用：<span class="code">`print()`</span></span><br><span class="line"></span><br><span class="line">引用代码段：</span><br><span class="line">​<span class="code">```</span>java</span><br><span class="line"><span class="code">	public void myFunction()&#123;</span></span><br><span class="line"><span class="code">		...</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##	7.	表格</span><br><span class="line"></span><br><span class="line">```markdown</span><br><span class="line">| id | name | age |</span><br><span class="line">| --- | --- | --- |</span><br><span class="line">| 001 | 张三 | 28 |</span><br><span class="line">| 002 | 桂花 | 25 |</span><br></pre></td></tr></table></figure>
+<h2 id="6-代码框"><a href="#6-代码框" class="headerlink" title="6.    代码框"></a>6.    代码框</h2><p>行级代码：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用1个反引号包括</span><br><span class="line"><span class="code">`print()`</span></span><br></pre></td></tr></table></figure>
+<p>代码段：</p>
+<p>&#96;&#96;&#96; java<br>public void myFunction(){}<br>&#96;&#96;&#96;</p>
+<p>代码段引用格式：使用三个反引号 + 声明代码语言 + 代码段 + 三个反引号(```) </p>
+<h2 id="7-表格"><a href="#7-表格" class="headerlink" title="7.    表格"></a>7.    表格</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| id | name | age |</span><br><span class="line">| --- | ---: | :---: |</span><br><span class="line">| 默认左对齐 | 我右对齐 | 我居中对齐 |</span><br><span class="line">| 002 | 桂花 | 25 |</span><br></pre></td></tr></table></figure>
 
-<p>表格是 Markdown 的弱项。</p>
+<p>表格是 Markdown 的弱项，<code>:</code>用于指定列的对齐方式。</p>
 <h2 id="8-分割符"><a href="#8-分割符" class="headerlink" title="8.    分割符"></a>8.    分割符</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">章节一</span><br><span class="line"><span class="emphasis">***</span></span><br><span class="line">章节二</span><br></pre></td></tr></table></figure>
 
 <p>只需要另起一行，连续输入三个星号 <code>***</code> 即可。</p>
@@ -575,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#认识-Markdown"><span class="nav-number">1.</span> <span class="nav-text">认识 Markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Markdown-的优点"><span class="nav-number">2.</span> <span class="nav-text">使用 Markdown 的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本语法"><span class="nav-number">3.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-通用知识"><span class="nav-number">3.1.</span> <span class="nav-text">0.    通用知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-六级标题"><span class="nav-number">3.2.</span> <span class="nav-text">1.    六级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-引用"><span class="nav-number">3.3.</span> <span class="nav-text">2.    引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-列表"><span class="nav-number">3.4.</span> <span class="nav-text">3.    列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-图片和超链接"><span class="nav-number">3.5.</span> <span class="nav-text">4.    图片和超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-粗体和斜体"><span class="nav-number">3.6.</span> <span class="nav-text">5.    粗体和斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-代码框"><span class="nav-number">3.7.</span> <span class="nav-text">6.    代码框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-分割符"><span class="nav-number">3.8.</span> <span class="nav-text">8.    分割符</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Markdown-的优点"><span class="nav-number">1.</span> <span class="nav-text">使用 Markdown 的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本语法"><span class="nav-number">2.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-通用知识"><span class="nav-number">2.1.</span> <span class="nav-text">0.    通用知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-六级标题"><span class="nav-number">2.2.</span> <span class="nav-text">1.    六级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-引用"><span class="nav-number">2.3.</span> <span class="nav-text">2.    引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-列表"><span class="nav-number">2.4.</span> <span class="nav-text">3.    列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-图片和超链接"><span class="nav-number">2.5.</span> <span class="nav-text">4.    图片和超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-粗体和斜体"><span class="nav-number">2.6.</span> <span class="nav-text">5.    粗体和斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-代码框"><span class="nav-number">2.7.</span> <span class="nav-text">6.    代码框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-表格"><span class="nav-number">2.8.</span> <span class="nav-text">7.    表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-分割符"><span class="nav-number">2.9.</span> <span class="nav-text">8.    分割符</span></a></li></ol></li></ol></div>
             
 
           </div>
