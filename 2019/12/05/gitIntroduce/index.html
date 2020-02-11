@@ -88,7 +88,7 @@
 <meta property="og:description" content="Git 是一个开源的分布式版本控制系统。  【Git 官网】、【Pro Git】、【廖雪峰Git教程】">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;images2017.cnblogs.com&#x2F;blog&#x2F;63651&#x2F;201709&#x2F;63651-20170905201033647-1915833066.png">
-<meta property="og:updated_time" content="2019-12-07T08:51:37.910Z">
+<meta property="og:updated_time" content="2019-12-12T09:07:44.376Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;images2017.cnblogs.com&#x2F;blog&#x2F;63651&#x2F;201709&#x2F;63651-20170905201033647-1915833066.png">
 
@@ -443,28 +443,28 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev2 origin/dev2</span><br></pre></td></tr></table></figure>
 
 <h2 id="五、上手实践"><a href="#五、上手实践" class="headerlink" title="五、上手实践"></a>五、上手实践</h2><p>项目中忽略某些文件：只需在<code>.gitignore</code>文件中列出</p>
-<h3 id="1、分支的应用"><a href="#1、分支的应用" class="headerlink" title="1、分支的应用"></a>1、分支的应用</h3><ul>
-<li>master：只用于发布生产环境</li>
-<li>dev：用于主线开发<ul>
+<h3 id="1、关联远程库"><a href="#1、关联远程库" class="headerlink" title="1、关联远程库"></a>1、关联远程库</h3><p>1）从远程库克隆到本地</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@gitee.com:noised/dubbosample.git</span><br></pre></td></tr></table></figure>
+
+<p>2）本地目录关联到远程库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 将本地目录初始化为git目录</span><br><span class="line">git init</span><br><span class="line">// 关联远程库</span><br><span class="line">git remote add origin git@gitee.com:noised/dubbosample.git</span><br><span class="line">// 从远程库拉取内容</span><br><span class="line">git pull origin</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、分支的应用"><a href="#2、分支的应用" class="headerlink" title="2、分支的应用"></a>2、分支的应用</h3><ul>
+<li>master：只用于发布生产环境的分支</li>
+<li>dev：用于主线开发的分支<ul>
 <li>测试通过后合并到master分支</li>
 <li>注意：过程中要随时<strong>拉取及合并</strong>master分支，以便及时得到别人的修改</li>
 </ul>
 </li>
-<li>iss：主线开发中处理突发异常<ul>
+<li>iss：主线开发中处理突发异常的分支<ul>
 <li>主线开发工作没有结束时，从master分支衍生出处理突发异常的分支</li>
 <li>完成后合并到master分支（dev会从master中获取到本次修改）</li>
 </ul>
 </li>
 </ul>
-<h3 id="2、关联远程库"><a href="#2、关联远程库" class="headerlink" title="2、关联远程库"></a>2、关联远程库</h3><p>1）从远程库克隆到本地</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 克隆</span><br><span class="line">git <span class="built_in">clone</span> git@gitee.com:noised/dubbosample.git</span><br></pre></td></tr></table></figure>
-
-<p>2）本地代码关联到远程库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 将本地目录初始化为git目录</span><br><span class="line">git init</span><br><span class="line">// 关联远程库</span><br><span class="line">git remote add origin git@gitee.com:noised/dubbosample.git</span><br><span class="line">// 如果远程库中已有内容</span><br><span class="line">git pull origin</span><br></pre></td></tr></table></figure>
-
-<h2 id="六、Git-Bash-命令行"><a href="#六、Git-Bash-命令行" class="headerlink" title="六、Git Bash 命令行"></a>六、Git Bash 命令行</h2><p>初始化创建本地库（.git目录）：<br><code>git init</code></p>
-<p>添加文件（工作区-&gt;暂存区）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 添加指定文件或目录</span><br><span class="line">git add 文件/目录</span><br><span class="line">// 添加当前路径下的所有文件和目录</span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<h2 id="六、Git-Bash-命令行（待整理）"><a href="#六、Git-Bash-命令行（待整理）" class="headerlink" title="六、Git Bash 命令行（待整理）"></a>六、Git Bash 命令行（待整理）</h2><p>初始化创建本地库（.git目录）：<br><code>git init</code></p>
+<p>添加更改到暂存区（工作区-&gt;暂存区）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 添加指定的文件或目录更改</span><br><span class="line">git add 文件/目录</span><br><span class="line">// 添加当前路径下的所有文件和目录的更改（含modified和untracked，不含deleted）</span><br><span class="line">git add .</span><br><span class="line">// 仅添加已被add过的文件（含modified和deleted,不含untracked）</span><br><span class="line">git add -u</span><br></pre></td></tr></table></figure>
 
 <p>提交到本地库（暂存区-&gt;本地仓库）：<br><code>git commit -m &quot;本地提交的备注说明&quot;</code></p>
 <p>添加远程库：</p>
@@ -485,11 +485,13 @@
 
 <hr>
 <p>查看提交记录：<br><code>git log</code></p>
-<p>查看当前库状态：<br><code>git status [filename]</code></p>
-<p>取消暂存文件（暂存区-&gt;工作区）：<br><code>git reset HEAD README.MD</code></p>
-<p>删除文件：<br><code>git rm README.MD</code></p>
-<p>取消文件修改：<br><code>git checkout -- README.MD</code></p>
+<p>查看当前状态（不含已commit的）：<br><code>git status [filename]</code></p>
 <p>比较文件差异：<br><code>git diff README.MD</code></p>
+<p>删除文件（仓库和本地文件都删除）：<br><code>git rm README.MD</code></p>
+<p>版本退回：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// ----【--hard 将从<span class="built_in">log</span>中完全删除】</span><br><span class="line">// 退回到上一版</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">// 退回到上上个版本</span><br><span class="line">git reset --hard HEAD^^</span><br><span class="line">// 退回指定的版本(commitid的前几位即可)</span><br><span class="line">git reset --hard afd123commitid456</span><br></pre></td></tr></table></figure>
+
+<p>取消文件修改：<br><code>git checkout -- README.MD</code></p>
 <hr>
 <p>远程库克隆到本地：(默认：origin库master分支)<br><code>git clone https://github.com/apache/dubbo-admin.git</code></p>
 <p>查看有哪些远程库：<br><code>git remote -v</code></p>
@@ -698,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Git-安装"><span class="nav-number">1.</span> <span class="nav-text">一、Git 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、Windows上安装"><span class="nav-number">1.1.</span> <span class="nav-text">1、Windows上安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Linux上安装"><span class="nav-number">1.2.</span> <span class="nav-text">2、Linux上安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Git-环境初始化"><span class="nav-number">2.</span> <span class="nav-text">二、Git 环境初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、SSH密钥"><span class="nav-number">3.</span> <span class="nav-text">三、SSH密钥</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、生成密钥"><span class="nav-number">3.1.</span> <span class="nav-text">1、生成密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、提供公钥"><span class="nav-number">3.2.</span> <span class="nav-text">2、提供公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、测试连接"><span class="nav-number">3.3.</span> <span class="nav-text">3、测试连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、TortoiseGit配置"><span class="nav-number">3.4.</span> <span class="nav-text">4、TortoiseGit配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、入门术语"><span class="nav-number">4.</span> <span class="nav-text">四、入门术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、通过基本流程理解工作区域："><span class="nav-number">4.1.</span> <span class="nav-text">1、通过基本流程理解工作区域：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、理解-git-clone-和-fork-的区别"><span class="nav-number">4.2.</span> <span class="nav-text">2、理解 git clone 和 fork 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、仓库被克隆到本地后，git都做了什么？"><span class="nav-number">4.3.</span> <span class="nav-text">3、仓库被克隆到本地后，git都做了什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、上手实践"><span class="nav-number">5.</span> <span class="nav-text">五、上手实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、分支的应用"><span class="nav-number">5.1.</span> <span class="nav-text">1、分支的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、关联远程库"><span class="nav-number">5.2.</span> <span class="nav-text">2、关联远程库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Git-Bash-命令行"><span class="nav-number">6.</span> <span class="nav-text">六、Git Bash 命令行</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Git-安装"><span class="nav-number">1.</span> <span class="nav-text">一、Git 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、Windows上安装"><span class="nav-number">1.1.</span> <span class="nav-text">1、Windows上安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Linux上安装"><span class="nav-number">1.2.</span> <span class="nav-text">2、Linux上安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Git-环境初始化"><span class="nav-number">2.</span> <span class="nav-text">二、Git 环境初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、SSH密钥"><span class="nav-number">3.</span> <span class="nav-text">三、SSH密钥</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、生成密钥"><span class="nav-number">3.1.</span> <span class="nav-text">1、生成密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、提供公钥"><span class="nav-number">3.2.</span> <span class="nav-text">2、提供公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、测试连接"><span class="nav-number">3.3.</span> <span class="nav-text">3、测试连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、TortoiseGit配置"><span class="nav-number">3.4.</span> <span class="nav-text">4、TortoiseGit配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、入门术语"><span class="nav-number">4.</span> <span class="nav-text">四、入门术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、通过基本流程理解工作区域："><span class="nav-number">4.1.</span> <span class="nav-text">1、通过基本流程理解工作区域：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、理解-git-clone-和-fork-的区别"><span class="nav-number">4.2.</span> <span class="nav-text">2、理解 git clone 和 fork 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、仓库被克隆到本地后，git都做了什么？"><span class="nav-number">4.3.</span> <span class="nav-text">3、仓库被克隆到本地后，git都做了什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、上手实践"><span class="nav-number">5.</span> <span class="nav-text">五、上手实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、关联远程库"><span class="nav-number">5.1.</span> <span class="nav-text">1、关联远程库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、分支的应用"><span class="nav-number">5.2.</span> <span class="nav-text">2、分支的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Git-Bash-命令行（待整理）"><span class="nav-number">6.</span> <span class="nav-text">六、Git Bash 命令行（待整理）</span></a></li></ol></div>
             
 
           </div>
@@ -718,7 +720,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
